@@ -22,6 +22,12 @@
             <h2>{{place.place_name}}</h2>
             <p>{{place.notes}}</p>
             <p>{{place.place_address}}</p>
+            
+            <span class="badge {{cekBadgeRate(place.rate_av)}}"
+            style="border-radius: 2px">
+                <span ng-if="!place.rate_av">0</span>
+                <span ng-if="place.rate_av">{{place.rate_av}}</span>
+            </span>
         </ion-item>
     </ion-list>
                     

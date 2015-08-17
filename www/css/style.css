@@ -77,3 +77,10 @@ p {
     position: fixed;
     bottom: 0;
 }
+
+.rate-1 { background-color: #de1d0f; }
+.rate-2 { background-color: #ff7800; }
+.rate-3 { background-color: #edd614; }
+.rate-4 { background-color: #9acd32; }
+.rate-5 { background-color: #3f7e00; }
+.rate-1, .rate-2, .rate-3, .rate-4, .rate-5 { color: #fff; }
