@@ -44,5 +44,15 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers'])
         }
     })
 
+    .state('app.places', {
+        url: '/places',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/places.html',
+                controller: 'PlacesCtrl'
+            }
+        }
+    })
+
     $urlRouterProvider.otherwise('/app/home');
 })
