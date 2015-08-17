@@ -1,0 +1,32 @@
+<ion-view view-title="Places">
+  <ion-content>
+    <!-- Search -->
+    <div class="search-bg">
+        <div class="col col-80 col-offset-10">
+            <div class="list list-inset ">
+              <label class="item item-input ">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder=" Search">
+              </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search -->
+    
+    <!-- List -->
+    <ion-list>
+        <ion-item ui-sref="app.tabs.place-info({id: place.id})"  ng-repeat="place in data.objects"
+            class="item item-thumbnail-left">
+            <img ng-src="{{ 'http://titiktanya.com' + place.photo_image}}" class="square">
+            <h2>{{place.place_name}}</h2>
+            <p>{{place.notes}}</p>
+            <p>{{place.place_address}}</p>
+        </ion-item>
+    </ion-list>
+                    
+    
+    <!-- List -->
+    
+  </ion-content>
+</ion-view>
