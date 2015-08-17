@@ -1,0 +1,26 @@
+<!-- header -->
+<ion-tabs class="tabs-striped tabs-color-assertive custom-tabs">
+
+      <!-- Recent Tab -->
+      <ion-tab title="Recent" icon-off="zmdi zmdi-info-outline" icon-on="zmdi zmdi-info-outline" ui-sref="app.tabs.place-info({id: place.id})">
+        <ion-nav-view name="tab-info"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Popular" icon-off="zmdi zmdi-assignment-o" icon-on="zmdi zmdi-assignment-o" ui-sref="app.tabs.place-desc({id: place.id})">
+        <ion-nav-view name="tab-desc"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Popular" icon-off="zmdi zmdi-card-giftcard" icon-on="zmdi zmdi-card-giftcard" ui-sref="app.tabs.place-promo({id: place.id})">
+        <ion-nav-view name="tab-promo"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Popular" icon-off="zmdi zmdi-pin" icon-on="zmdi zmdi-pin" ui-sref="app.tabs.place-news({id: place.id})">
+        <ion-nav-view name="tab-news"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Popular" icon-off="zmdi zmdi-comment-outline" icon-on="zmdi zmdi-comment-outline" ui-sref="app.tabs.place-reviews({id: place.id})">
+        <ion-nav-view name="tab-reviews"></ion-nav-view>
+      </ion-tab>
+
+
+    </ion-tabs>

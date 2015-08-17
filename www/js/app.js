@@ -48,8 +48,67 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers'])
         url: '/places',
         views: {
             'menuContent': {
-                templateUrl: 'templates/places.html',
+                templateUrl: 'templates/places/all.html',
                 controller: 'PlacesCtrl'
+            }
+        }
+    })
+
+    .state('app.tabs', {
+        url: '/tabs',
+        abstract: true,
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/places/tabs.html',
+                controller: 'TabsCtrl'
+            }
+        }
+    })
+
+
+
+    .state('app.tabs.place-info', {
+        url: '/place/:id/info',
+        views: {
+            'tab-info': {
+                templateUrl: 'templates/places/info.html',
+                controller: 'PlaceDetailCtrl'
+            }
+        }
+    })
+    .state('app.tabs.place-desc', {
+        url: '/place/:id/desc',
+        views: {
+            'tab-desc': {
+                templateUrl: 'templates/places/desc.html',
+                controller: 'PlaceDetailCtrl'
+            }
+        }
+    })
+    .state('app.tabs.place-promo', {
+        url: '/place/:id/promo',
+        views: {
+            'tab-promo': {
+                templateUrl: 'templates/places/promo.html',
+                controller: 'PlaceDetailCtrl'
+            }
+        }
+    })
+    .state('app.tabs.place-news', {
+        url: '/place/:id/news',
+        views: {
+            'tab-news': {
+                templateUrl: 'templates/places/news.html',
+                controller: 'PlaceDetailCtrl'
+            }
+        }
+    })
+    .state('app.tabs.place-reviews', {
+        url: '/place/:id/reviews',
+        views: {
+            'tab-reviews': {
+                templateUrl: 'templates/places/reviews.html',
+                controller: 'PlaceDetailCtrl'
             }
         }
     })

@@ -9,7 +9,7 @@ angular.module('TitikTanya.controllers', [])
     $scope.isExpanded = false;
 }])
 
-.controller('AppCtrl', ['$scope', function($scope){
+.controller('TabsCtrl', ['$scope', function($scope){
     $scope.isExpanded = false;
 }])
 
@@ -21,6 +21,6 @@ angular.module('TitikTanya.controllers', [])
     
 }])
 
-.controller('Place-detailCtrl', ['$scope', function($scope){
+.controller('PlaceDetailCtrl', ['$scope', function($scope){
     
 }])
