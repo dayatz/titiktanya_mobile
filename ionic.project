@@ -1,4 +1,10 @@
 {
   "name": "titiktanya_mobile",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api/v1",
+      "proxyUrl": "http://titiktanya.com/service/api/v1"
+    }
+  ]
 }

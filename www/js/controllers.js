@@ -17,8 +17,14 @@ angular.module('TitikTanya.controllers', [])
     
 }])
 
-.controller('PlacesCtrl', ['$scope', function($scope){
-    
+.controller('PlacesCtrl', ['$scope', 'PlaceFactory', function($scope, PlaceFactory){
+    PlaceFactory.all()
+        .success(function(data){
+            $scope.data = data;
+        })
+        .error(function(err){
+            console.log(err);
+        });
 }])
 
 .controller('PlaceDetailCtrl', ['$scope', function($scope){

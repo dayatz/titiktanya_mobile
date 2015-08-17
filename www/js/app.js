@@ -18,6 +18,8 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
   });
 })
 
+.constant('ApiUrl', 'http://localhost:8100/api/v1')
+
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
     // Turn off caching for demo simplicity's sake
     $ionicConfigProvider.views.maxCache(0);
