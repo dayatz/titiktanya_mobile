@@ -64,6 +64,16 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers'])
             }
         }
     })
+    .state('app.tabs.tab-img', {
+        url: '/',
+        abstract: true,
+        views: {
+            'tab-img': {
+                templateUrl: 'templates/places/tab-img.html',
+                controller: 'TabsCtrl'
+            }
+        }
+    })
 
 
 

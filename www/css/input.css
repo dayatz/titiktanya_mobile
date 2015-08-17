@@ -63,3 +63,39 @@
 .custom-tabs i.icon{
     padding-top: 5px;
 }
+
+.desc{
+    margin-top: 10px;
+    background-color: #fff !important;
+}
+
+.desc h2{
+    color: #565a5c;
+    text-align: center;
+}
+
+.custom-p{
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 20px 10px 5px 20px;
+    color: #565a5c;
+}
+
+.promo{
+    padding: 20px 5px 10px 20px !important;
+}
+
+.promo h3{
+    color: #C62630;
+}
+
+.promo p{
+    font-size: 17px;
+    line-height: 1.5;
+    color: #565a5c;
+}
+
+.promo-date{
+    color: #000 !important;
+    font-size: 18px;
+}
