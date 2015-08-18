@@ -1,15 +1,15 @@
-<ion-view view-title="Place Detail">
+<ion-view view-title="{{ place.place_name }}">
     <ion-content>
-    <div class="img-header content" style="background: url(../img/sushi.jpg)">
+    <div class="img-header content" style="background: url({{ 'http://titiktanya.com' + place.photo_image }})">
         <div class="cover">
-            <h2>De'sushi</h2>
-            <p>Japanese Lovers Rendezvouz</p>
+            <h2>{{ place.place_name }}</h2>
+            <p>{{ place.notes }}</p>
         </div>
     </div>
 
     <div class="open-time">
         <div class="col col-75 col-offset-10">
-        <p>Open at: 08.00 - 21.00</p>
+        <p><i class="zmdi zmdi-timer"></i> {{place.open_time}} - {{place.closed_time}}</p>
         </div>
     </div>
     <div class="list">
@@ -17,8 +17,12 @@
           <div class="item item-text-wrap">
             <h3 class="title">Contact</h3>
             <div class="col col-80 col-offset-10">
-                <p><span class="ion-ios-home-outline"></span> Jln. Ade Irma Suryani</p>
-                <p><span class="ion-iphone"></span> +6281770775760</p>
+                <p><span class="zmdi zmdi-home"></span> {{ place.place_address }}, {{ place.postal_code }}</p>
+                <p><span class="zmdi zmdi-smartphone-android"></span> {{ place.place_hp }}</p>
+                <p><span class="zmdi zmdi-email"></span> {{ place.email }}</p>
+                <p><span class="zmdi zmdi-globe"></span> {{ place.website }}</p>
+                <p><span class="zmdi zmdi-twitter"></span> {{ place.twitter }}</p>
+
             </div>
           </div>
         </div>
@@ -26,9 +30,7 @@
           <div class="item item-text-wrap">
             <h3 class="title">Fasilitas</h3>
             <div class="col col-80 col-offset-10">
-                <p><span class="ion-checkmark-circled"></span> Wifi</p>
-                <p><span class="ion-checkmark-circled"></span> Parking</p>
-                <p><span class="ion-checkmark-circled"></span> Live Music</p>
+                <p ng-repeat="fasilitas in place.facility"><span class="zmdi zmdi-check-circle"></span> {{ fasilitas.name }}</p>
             </div>
 
           </div>

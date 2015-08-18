@@ -11,8 +11,8 @@ angular.module('TitikTanya.services', [])
             return $http.get(ApiUrl + '/myplace/?format=json&limit=10');
         },
 
-        get: function() {
-            return $http.get();
+        get: function(id) {
+            return $http.get(ApiUrl + '/myplace/' + id + '/?format=json');
         }
     };
 }])
