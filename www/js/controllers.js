@@ -43,6 +43,16 @@ angular.module('TitikTanya.controllers', [])
     }
 }])
 
-.controller('PlaceDetailCtrl', ['$scope', function($scope){
-    
+.controller('PlaceDetailCtrl', ['$scope', '$stateParams', 'PlaceFactory', function($scope, $stateParams, PlaceFactory){
+    var id = $stateParams.id;
+
+    PlaceFactory.get(id)
+    .success(function(data){
+        $scope.place = data;
+        console.log($scope.place);
+    })
+    .error(function(err){
+        console.log(err);
+    });
+
 }])

@@ -99,3 +99,7 @@
     color: #000 !important;
     font-size: 18px;
 }
+
+.open-time p{
+    text-align: center;
+}
