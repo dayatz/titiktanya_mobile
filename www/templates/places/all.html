@@ -15,56 +15,21 @@
     <!-- Search -->
     
     <!-- List -->
-    <div class="list">
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/cupcake.jpg" alt="Cupcake" class="square">
-            <h2>GeorgeTown Cupcake</h2>
-            <p>Cupcake, Snack, n Drink</p>
-            <p>Jln. Ahmad Yani no.10</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/coffe.jpg" alt="Coffe" class="square">
-            <h2>Coffee Toffee</h2>
-            <p>Coffe Shop</p>
-            <p>Jln. Kemerdekaan no.11</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/mirasa.jpg" alt="Donut" class="square">
-            <h2>Mirasa</h2>
-            <p>Donut n Cake</p>
-            <p>Jln. Ismail Marzuki no.8</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/sushi.jpg" alt="Sushi" class="square">
-            <h2>De'Sushi</h2>
-            <p>Japanese Food</p>
-            <p>Jln. Sriwijaya no. 5</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/mcd.jpg" alt="Food" class="square">
-            <h2>McDonald's</h2>
-            <p>Fast Food Restaurant</p>
-            <p>Jln. Panca Usaha no.10</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/coffe.jpg" alt="Coffe" class="square">
-            <h2>Coffee Toffee</h2>
-            <p>Coffe Shop</p>
-            <p>Jln. Kemerdekaan no.11</p>
-        </a>
-
-        <a href="#" class="item item-thumbnail-left">
-            <img src="../img/mirasa.jpg" alt="Donut" class="square">
-            <h2>Mirasa</h2>
-            <p>Donut n Cake</p>
-            <p>Jln. Ismail Marzuki no.8</p>
-        </a>
-    </div>
+    <ion-list>
+        <ion-item ui-sref="app.tabs.place-info({id: place.id})"  ng-repeat="place in data.objects"
+            class="item item-thumbnail-left">
+            <img ng-src="{{ 'http://titiktanya.com' + place.photo_image}}" class="square">
+            <h2>{{place.place_name}}</h2>
+            <p>{{place.notes}}</p>
+            <p>{{place.place_address}}</p>
+            
+            <span class="badge {{cekBadgeRate(place.rate_av)}}"
+            style="border-radius: 2px">
+                <span ng-if="!place.rate_av">0</span>
+                <span ng-if="place.rate_av">{{place.rate_av}}</span>
+            </span>
+        </ion-item>
+    </ion-list>
                     
     
     <!-- List -->

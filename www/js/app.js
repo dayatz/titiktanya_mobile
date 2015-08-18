@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers'])
+angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -17,6 +17,8 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers'])
     }
   });
 })
+
+.constant('ApiUrl', 'http://localhost:8100/api/v1')
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
     // Turn off caching for demo simplicity's sake
