@@ -13,6 +13,14 @@ angular.module('TitikTanya.services', [])
 
         get: function(id) {
             return $http.get(ApiUrl + '/myplace/' + id + '/?format=json');
+        },
+
+        getPromo: function(id) {
+            return $http.get(ApiUrl + '/promo/' + id + '/?format=json');
+        },
+
+        getNews: function(id) {
+            return $http.get(ApiUrl + '/news/' + id + '/?format=json');
         }
     };
 }])

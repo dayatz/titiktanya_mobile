@@ -20,9 +20,12 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
 
 .constant('ApiUrl', 'http://localhost:8100/api/v1')
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider){
     // Turn off caching for demo simplicity's sake
     $ionicConfigProvider.views.maxCache(0);
+
+    // enable cache
+    $httpProvider.defaults.cache = true;
 
     // Turn off back button text
     $ionicConfigProvider.backButton.previousTitleText(false);

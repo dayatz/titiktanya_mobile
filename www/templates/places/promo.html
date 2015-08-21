@@ -1,21 +1,26 @@
 <ion-view view-title="Title">
   <ion-content>
-    <div class="img-header content" style="background: url(../img/sushi.jpg)">
+    <div class="img-header content" style="background: url({{ 'http://titiktanya.com' + place.photo_image }})">
         <div class="cover">
-            <h2>De'sushi</h2>
-            <p>Japanese Lovers Rendezvouz</p>
+            <h2>{{ place.place_name }}</h2>
+            <p>{{ place.notes }}</p>
         </div>
     </div>
 
-    <div class="list card promo">
-        <p class="custom-p">Belum ada promo pada lokasi De'sushi</p>
+    <div class="list card" ng-if="!promos.total">
+        <p class="custom-p">Belum ada promo</p>
     </div>
-    <div class="list card promo">
-        <h3>Diskon 20% bagi pengguna Xl internet</h3>
-        <p>Bagi kamu pengguna Xl ada diskon menarik di De'Sushi. Dapatkan diskon 20% bagi pengguna Xl Internet</p>
-        <p class="promo-date">Promo berlaku sampai dengan tanggal 28 Agustus 2015</p>
+    <div class="list card promo" ng-if="promos.total" ng-repeat="promo in promos.objects">
+        <h3 style="font-size: 17px;">
+            <a href="{{ promo.source_link }}">{{ promo.title }}</a>
+        </h3>
+        <span style="color: #565a5c; font-size: 13px">{{ promo.posted_on | date: 'dd MMMM yyyy' }}</span>
+        <p>{{ promo.content }}</p>
+
+        <p class="promo-valid-title">Promo berlaku:</p>
+        <span>{{ promo.valid_from | date: 'dd MMMM yyyy' }} - {{ promo.valid_until | date: 'dd MMMM yyyy' }}</span>
     </div>
-    
+
 
   </ion-content>
 </ion-view>

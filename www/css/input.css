@@ -46,7 +46,7 @@
 }
 
 .open-time{
-    background-color: #CECECE;
+    background-color: #E0E0E0;
     padding: 15px 5px 2px 10px;
 }
 
@@ -85,14 +85,20 @@
     padding: 20px 5px 10px 20px !important;
 }
 
-.promo h3{
+.promo h3, .promo h3 a {
     color: #C62630;
+    text-decoration: none;
 }
 
 .promo p{
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.5;
     color: #565a5c;
+    margin-top: 10px;
+}
+.promo-valid-title {
+    margin-bottom:0;
+    color:#C62630 !important;
 }
 
 .promo-date{

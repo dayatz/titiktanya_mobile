@@ -1,24 +1,24 @@
 
-<ion-tabs class="tabs-striped tabs-color-assertive custom-tabs">
+<ion-tabs class="tabs-striped tabs-color-assertive custom-tabs" ng-controller="TabsCtrl">
 
       <!-- Recent Tab -->
-      <ion-tab title="Recent" icon-off="zmdi zmdi-info-outline" icon-on="zmdi zmdi-info-outline" ui-sref="app.tabs.place-info({id: place.id})">
+      <ion-tab title="Info" icon-off="zmdi zmdi-info-outline" icon-on="zmdi zmdi-info-outline" ui-sref="app.tabs.place-info({id: paramId})">
         <ion-nav-view name="tab-info"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Popular" icon-off="zmdi zmdi-assignment-o" icon-on="zmdi zmdi-assignment-o" ui-sref="app.tabs.place-desc({id: place.id})">
+      <ion-tab title="Description" icon-off="zmdi zmdi-assignment-o" icon-on="zmdi zmdi-assignment-o" ui-sref="app.tabs.place-desc({id: paramId})">
         <ion-nav-view name="tab-desc"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Popular" icon-off="zmdi zmdi-card-giftcard" icon-on="zmdi zmdi-card-giftcard" ui-sref="app.tabs.place-promo({id: place.id})">
+      <ion-tab title="Promo" icon-off="zmdi zmdi-card-giftcard" icon-on="zmdi zmdi-card-giftcard" ui-sref="app.tabs.place-promo({id: paramId})">
         <ion-nav-view name="tab-promo"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Popular" icon-off="zmdi zmdi-collection-text" icon-on="zmdi zmdi-collection-text" ui-sref="app.tabs.place-news({id: place.id})">
+      <ion-tab title="News" icon-off="zmdi zmdi-collection-text" icon-on="zmdi zmdi-collection-text" ui-sref="app.tabs.place-news({id: paramId})">
         <ion-nav-view name="tab-news"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Popular" icon-off="zmdi zmdi-comment-outline" icon-on="zmdi zmdi-comment-outline" ui-sref="app.tabs.place-reviews({id: place.id})">
+      <ion-tab title="Reviews" icon-off="zmdi zmdi-comment-outline" icon-on="zmdi zmdi-comment-outline" ui-sref="app.tabs.place-reviews({id: paramId})">
         <ion-nav-view name="tab-reviews"></ion-nav-view>
       </ion-tab>
 

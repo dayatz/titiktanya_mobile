@@ -9,12 +9,13 @@ angular.module('TitikTanya.controllers', [])
     $scope.isExpanded = false;
 }])
 
-.controller('TabsCtrl', ['$scope', function($scope){
+.controller('TabsCtrl', ['$scope', '$stateParams', function($scope, $stateParams){
     $scope.isExpanded = false;
+    $scope.paramId = $stateParams.id;
 }])
 
 .controller('HomeCtrl', ['$scope', function($scope){
-    
+
 }])
 
 .controller('PlacesCtrl', ['$scope', 'PlaceFactory', function($scope, PlaceFactory){
@@ -43,16 +44,25 @@ angular.module('TitikTanya.controllers', [])
     }
 }])
 
+// Place detail controller start here
 .controller('PlaceDetailCtrl', ['$scope', '$stateParams', 'PlaceFactory', function($scope, $stateParams, PlaceFactory){
     var id = $stateParams.id;
 
     PlaceFactory.get(id)
     .success(function(data){
-        $scope.place = data;
+        $scope.place = data.objects[0];
         console.log($scope.place);
     })
     .error(function(err){
         console.log(err);
     });
 
+    PlaceFactory.getPromo(id)
+    .success(function(data){
+        $scope.promos = data;
+        console.log($scope.place);
+    })
+    .error(function(err){
+        console.log(err);
+    });
 }])

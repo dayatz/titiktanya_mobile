@@ -1,12 +1,12 @@
 <ion-view view-title="Title">
   <ion-content>
-    <div class="img-header content" style="background: url(../img/sushi.jpg)">
+    <div class="img-header content" style="background: url({{ 'http://titiktanya.com' + place.photo_image }})">
         <div class="cover">
-            <h2>De'sushi</h2>
-            <p>Japanese Lovers Rendezvouz</p>
+            <h2>{{ place.place_name }}</h2>
+            <p>{{ place.notes }}</p>
         </div>
     </div>
-    
+
     <div class="item card-item">
         <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
             <div class="item item-avatar item-text-wrap">

@@ -8,8 +8,8 @@
     </div>
     <div class="desc">
         <div class="list card ">
-            <!-- <h2>De'Sushi</h2> -->
-            <p class="custom-p">De’ Sushi was start to open their menu in 2009, and now there are 9 branches that spread in some area in Indonesia. During in their business, De’ Sushi is always concern about quality and services, for by those two things, they believe that the taste become more supported in the market.</p>
+            <p ng-if="!place.place_descript.length" class="custom-p">Belum ada deskripsi</p>
+            <div ng-if="place.place_descript.length" class="custom-p" ng-bind-html="place.place_descript"></div>
         </div>
     </div>
   </ion-content>
