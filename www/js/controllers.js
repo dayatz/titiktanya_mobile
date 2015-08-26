@@ -51,7 +51,6 @@ angular.module('TitikTanya.controllers', [])
     PlaceFactory.get(id)
     .success(function(data){
         $scope.place = data.objects[0];
-        console.log($scope.place);
     })
     .error(function(err){
         console.log(err);
@@ -60,7 +59,14 @@ angular.module('TitikTanya.controllers', [])
     PlaceFactory.getPromo(id)
     .success(function(data){
         $scope.promos = data;
-        console.log($scope.place);
+    })
+    .error(function(err){
+        console.log(err);
+    });
+
+    PlaceFactory.getNews(id)
+    .success(function(data){
+        $scope.newses = data;
     })
     .error(function(err){
         console.log(err);
