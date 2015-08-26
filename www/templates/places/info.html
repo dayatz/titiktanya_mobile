@@ -17,11 +17,11 @@
           <div class="item item-text-wrap">
             <h3 class="title">Contact</h3>
             <div class="col col-80 col-offset-10">
-                <p><span class="zmdi zmdi-home"></span> {{ place.place_address }}, {{ place.postal_code }}</p>
-                <p><span class="zmdi zmdi-smartphone-android"></span> {{ place.place_hp }}</p>
-                <p><span class="zmdi zmdi-email"></span> {{ place.email }}</p>
-                <p><span class="zmdi zmdi-globe"></span> {{ place.website }}</p>
-                <p><span class="zmdi zmdi-twitter"></span> {{ place.twitter }}</p>
+                <p ng-if="place.place_address"><span class="zmdi zmdi-home"></span> {{ place.place_address }}, {{ place.postal_code }}</p>
+                <p ng-if="place.place_hp"><span class="zmdi zmdi-smartphone-android"></span> {{ place.place_hp }}</p>
+                <p ng-if="place.email"><span class="zmdi zmdi-email"></span> {{ place.email }}</p>
+                <p ng-if="place.website"><span class="zmdi zmdi-globe"></span> {{ place.website }}</p>
+                <p ng-if="place.twitter"><span class="zmdi zmdi-twitter"></span> {{ place.twitter }}</p>
 
             </div>
           </div>
