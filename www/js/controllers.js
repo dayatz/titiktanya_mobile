@@ -5,21 +5,28 @@
 */
 angular.module('TitikTanya.controllers', [])
 
-.controller('AppCtrl', ['$scope', function($scope){
+.controller('AppCtrl', ['$scope', '$state', function($scope, $state){
     $scope.isExpanded = false;
+
+    $scope.goToPlaces = function() {
+        $state.go('app.places');
+    }
 }])
 
 
 .controller('TabsCtrl', ['$scope', '$stateParams', function($scope, $stateParams){
     $scope.isExpanded = false;
     $scope.paramId = $stateParams.id;
+    $scope.leftButtons = [{
+        type: 'button-icon icon ion-navicon'
+    }];
 }])
 
 .controller('HomeCtrl', ['$scope', function($scope){
 
 }])
 
-.controller('PlacesCtrl', ['$scope', '$ionicLoading', 'PlaceFactory', function($scope, $ionicLoading, PlaceFactory){
+.controller('PlacesCtrl', ['$scope', '$ionicLoading', '$state', 'PlaceFactory', function($scope, $ionicLoading, $state, PlaceFactory){
     $ionicLoading.show({
         templateUrl: 'templates/load.html'
     });
@@ -47,6 +54,10 @@ angular.module('TitikTanya.controllers', [])
             c = 1;
         }
         return 'rate-' + c;
+    }
+
+    $scope.goToPlaceDetail = function(id) {
+        $state.go('app.tabs.place-info', {id: id});
     }
 }])
 

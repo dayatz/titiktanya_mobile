@@ -11,7 +11,7 @@
             </ion-nav-buttons>
         </ion-nav-bar>
         
-        <ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}" ></ion-nav-view>
+        <ion-nav-view name="menuContent" animation="slide-right-left" ng-class="{expanded: isExpanded}" ></ion-nav-view>
     </ion-side-menu-content>
 
     <ion-side-menu side="right">
@@ -24,7 +24,7 @@
                 <ion-item nav-clear menu-close ui-sref="app.home">
                     Home
                 </ion-item>
-                <ion-item nav-clear menu-close ui-sref="app.places">
+                <ion-item nav-clear menu-close ng-click="goToPlaces()">
                     Places
                 </ion-item>
                 <ion-item nav-clear menu-close ui-sref="app.blog">

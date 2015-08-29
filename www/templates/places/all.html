@@ -16,7 +16,7 @@
     
     <!-- List -->
     <ion-list>
-        <ion-item ui-sref="app.tabs.place-info({id: place.id})"  ng-repeat="place in data.objects"
+        <ion-item ng-repeat="place in data.objects" ng-click="goToPlaceDetail({{place.id}})"
             class="item item-thumbnail-left">
             <img ng-src="{{ 'http://titiktanya.com' + place.photo_image}}" class="square">
             <h2>{{place.place_name}}</h2>
