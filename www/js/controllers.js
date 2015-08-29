@@ -9,6 +9,7 @@ angular.module('TitikTanya.controllers', [])
     $scope.isExpanded = false;
 }])
 
+
 .controller('TabsCtrl', ['$scope', '$stateParams', function($scope, $stateParams){
     $scope.isExpanded = false;
     $scope.paramId = $stateParams.id;
@@ -18,10 +19,15 @@ angular.module('TitikTanya.controllers', [])
 
 }])
 
-.controller('PlacesCtrl', ['$scope', 'PlaceFactory', function($scope, PlaceFactory){
+.controller('PlacesCtrl', ['$scope', '$ionicLoading', 'PlaceFactory', function($scope, $ionicLoading, PlaceFactory){
+    $ionicLoading.show({
+        templateUrl: 'templates/load.html'
+    });
+
     PlaceFactory.all()
         .success(function(data){
             $scope.data = data;
+            $ionicLoading.hide();
         })
         .error(function(err){
             console.log(err);

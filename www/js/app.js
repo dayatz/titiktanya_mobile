@@ -91,6 +91,16 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
             }
         }
     })
+
+    .state('app.tabs.tes', {
+        url: '/place/tes',
+        views: {
+            'tab-tes': {
+                template: '<h1>tessss</h1>'
+            }
+        }
+    })
+
     .state('app.tabs.place-desc', {
         url: '/place/:id/desc',
         views: {

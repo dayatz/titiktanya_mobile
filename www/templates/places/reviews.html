@@ -1,4 +1,4 @@
-<ion-view view-title="Title">
+<ion-view view-title="Review">
   <ion-content>
     <div class="img-header content" style="background: url({{ 'http://titiktanya.com' + place.photo_image }})">
         <div class="cover">
@@ -7,19 +7,20 @@
         </div>
     </div>
 
-    <div class="item card-item">
-        <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
-            <div class="item item-avatar item-text-wrap">
-                <span class="avatar" style="background-image: url('../../img/ionic.png');"></span>
-                <strong>Tyrion Lannister</strong> says "Perhaps that is the secret. It is not what we do, so much as why we do it."
-                <div class="card-footer text-right">
-                    <div class="pull-left">
-                        <i class="icon ion-clock"></i> 12 mins ago
+    <div class="item card-item card-item-footer">
+            <div ui-sref="app.gallery" class="card footer-item">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('../img/dota.png');"></span>
+                    <strong>Tyrion Lannister</strong> 
+                    <p>says "Perhaps that is the secret. It is not what we do, so much as why we do it."</p>
+                    <div class="card-footer text-right">
+                       <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
   </ion-content>
 </ion-view>
