@@ -138,5 +138,15 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
         }
     })
 
+    .state('app.blog', {
+        url: '/blog',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/blog.html',
+                controller: 'BlogCtrl'
+            }
+        }
+    })
+
     $urlRouterProvider.otherwise('/app/home');
 })

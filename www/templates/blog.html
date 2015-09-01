@@ -1,0 +1,15 @@
+<ion-view view-title="Blog">
+  <ion-content>
+    <div class="list card" ng-repeat="blog in blogs.objects">
+        <div class="item item-image">
+          <img ng-src="{{ 'http://titiktanya.com' + blog.photo }}">
+        </div>
+
+        <div class="item item-body">
+            <a href="#" class="custom-tag" ng-repeat="category in blog.category">{{ category.name }}</a>
+            <h2 class="custom-title">{{ blog.title }}</h2>
+            <span>{{ blog.posted_on}}</span>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -85,7 +85,24 @@ angular.module('TitikTanya.controllers', [])
     .success(function(data){
         $scope.newses = data;
     })
+
+    PlaceFactory.getReview(id)
+    .success(function(data){
+        $scope.reviews = data;
+    })
     .error(function(err){
         console.log(err);
     });
+}])
+
+.controller('BlogCtrl', ['$scope', '$stateParams', 'BlogFactory', function($scope, $stateParams, BlogFactory){
+    var id = $stateParams.id;
+
+    BlogFactory.all()
+    .success(function(data){
+        $scope.blogs = data;
+    })
+    .error(function(err){
+        console.log(err);
+    })
 }])
