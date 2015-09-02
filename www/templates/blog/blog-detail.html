@@ -1,0 +1,23 @@
+<ion-view view-title="{{ blogDetail.title }}" class="post-detail">
+    <ion-content>
+        <img class="posting-header" ng-src="{{ 'http://titiktanya.com' + blogDetail.photo }}" alt="Description">
+        <a href="#" class="custom-tag custom-margin"ng-repeat="category in blogDetail.category">{{ category.name }}</a>
+        <h3 class="custom-title custom-padding">{{ blogDetail.title }}</h3>
+        <span class="custom-date">{{ blogDetail.posted_on }}</span>
+        <div show-image class="custom-content custom-padding" ng-bind-html="blogDetail.content"></div>
+        <div class="card share">
+          <div class="item item-text-wrap">
+            <p>Dapat manfaat dari artikel ini? yuk bagikan :)</p>
+            <button class="button button-positive ion-social-facebook">
+              
+            </button>
+            <button class="button button-positive ion-social-twitter">
+              
+            </button>
+            <button class="button button-positive ion-social-googleplus">
+             
+            </button>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

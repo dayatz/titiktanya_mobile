@@ -1,6 +1,6 @@
 <ion-view view-title="Blog">
   <ion-content>
-    <div class="list card" ng-repeat="blog in blogs.objects">
+    <div class="list card" ng-repeat="blog in blogs.objects" ng-click="goToBlogDetail({{ blog.id }})">
         <div class="item item-image">
           <img ng-src="{{ 'http://titiktanya.com' + blog.photo }}">
         </div>

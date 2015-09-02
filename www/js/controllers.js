@@ -95,8 +95,7 @@ angular.module('TitikTanya.controllers', [])
     });
 }])
 
-.controller('BlogCtrl', ['$scope', '$stateParams', 'BlogFactory', function($scope, $stateParams, BlogFactory){
-    var id = $stateParams.id;
+.controller('BlogCtrl', ['$scope', '$state', 'BlogFactory', function($scope, BlogFactory){
 
     BlogFactory.all()
     .success(function(data){
@@ -105,4 +104,35 @@ angular.module('TitikTanya.controllers', [])
     .error(function(err){
         console.log(err);
     })
+
+    $scope.goToBlogDetail = function(id){
+        $state.go('app.blog-detail', {id:id})
+    };
+}])
+
+.controller('BlogDetailCtrl', ['$scope', '$ionicLoading', 'BlogFactory', '$stateParams', '$compile', function($scope, $ionicLoading, BlogFactory, $stateParams){
+    var id = $stateParams.id;
+    $ionicLoading.show({
+        templateUrl: 'templates/load.html'
+    });
+
+    BlogFactory.get(id)
+    .success(function(data){
+        $scope.blogDetail = data.objects[0];
+
+        var content = $scope.blogDetail.content;
+
+        $scope.blogDetail.content = content.replace('<img','<img ng-click="showModal"');
+
+        $ionicLoading.hide();
+        console.log($scope.blogDetail);
+    })
+    .error(function(err){
+        console.log(err);
+    });
+
+    $scope.showModal = function() {
+        alert('elaaaaa');
+    }
+
 }])

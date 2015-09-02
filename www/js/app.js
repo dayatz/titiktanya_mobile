@@ -142,8 +142,18 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
         url: '/blog',
         views: {
             'menuContent': {
-                templateUrl: 'templates/blog.html',
+                templateUrl: 'templates/blog/blog.html',
                 controller: 'BlogCtrl'
+            }
+        }
+    })
+
+    .state('app.blog-detail', {
+        url: '/blog-detail/:id',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/blog/blog-detail.html',
+                controller: 'BlogDetailCtrl'
             }
         }
     })
