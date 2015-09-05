@@ -108,3 +108,28 @@
 .open-time p{
     text-align: center;
 }
+
+.row{
+    height: 33.33%;
+}
+
+.card .item img{
+    box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+    border-radius: 0 !important;
+}
+
+.card{
+    padding-top: 30px;
+}
+
+.card h3{
+    color: #B71C1C;
+}
+
+.item-icon-right .icon{
+    color: #E3625B !important;
+}
+
+.wrap{
+    white-space: normal !important;
+}

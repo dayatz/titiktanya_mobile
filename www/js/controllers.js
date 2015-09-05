@@ -26,6 +26,12 @@ angular.module('TitikTanya.controllers', [])
 
 }])
 
+.controller('PopularPlacesCtrl', ['$scope', '$state', function($scope,$state){
+    $scope.goToPopularPlaces = function() {
+        $state.go('app.popular-place');
+    }
+}])
+
 .controller('PlacesCtrl', ['$scope', '$ionicLoading', '$state', 'PlaceFactory', function($scope, $ionicLoading, $state, PlaceFactory){
     $ionicLoading.show({
         templateUrl: 'templates/load.html'

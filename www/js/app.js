@@ -59,6 +59,16 @@ angular.module('TitikTanya', ['ionic', 'TitikTanya.controllers', 'TitikTanya.ser
         }
     })
 
+    .state('app.popular-place', {
+        url: '/popular-place',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/places/popular-place.html',
+                controller: 'PopularPlacesCtrl'
+            }
+        }
+    })
+
     .state('app.tabs', {
         url: '/tabs',
         abstract: true,
